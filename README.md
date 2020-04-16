@@ -4,12 +4,14 @@
 ## Authorisation server
   Authorisation server will be responsible to play following roles.
   1. Provide access token for the resource server.
-  
-![alt text](https://www.google.com/search?q=gyan&sxsrf=ALeKk03h9t1SVsvzqhhtsFH7cWaQAQm8mg:1587036380914&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjF7Omd6-zoAhUhheYKHblVBYUQ_AUoAnoECA8QBA&biw=1366&bih=625#imgrc=cCj1-vg3S2Y3gM)
 
   ```
   localhost:9999/oauth/token
   ```
+  ![alt text](https://raw.githubusercontent.com/gyanicit/ScreenShots/master/token1.PNG)
+
+  ![alt text](https://raw.githubusercontent.com/gyanicit/ScreenShots/master/token2.PNG)
+
   2. It will validate the token passed  to the resource server. Actually when you will make request to the resource server with particular Rest enpoint. Internally resource server will make a call to authorization Server to validate the token. (Check following configuration in application.yml in ResourceServer)
  
  ```
