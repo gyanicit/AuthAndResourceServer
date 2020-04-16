@@ -26,6 +26,11 @@
 ## Resource Server
   Resource server is kind of target microservice which will be responsible to provide access of a resource exposed by using different Rest endpoints.
 
+  ![alt text](https://raw.githubusercontent.com/gyanicit/ScreenShots/master/req1.PNG)
+
+  ![alt text](https://raw.githubusercontent.com/gyanicit/ScreenShots/master/req2.PNG)
+
+
   ```
   localhost:8080/hello
   ```
