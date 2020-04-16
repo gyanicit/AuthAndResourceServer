@@ -32,8 +32,14 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	@Override
 	public void configure(ClientDetailsServiceConfigurer configurer) throws Exception{
 		configurer.inMemory()
-		.withClient("client1")
-		.secret("{noop}secret1")
+		.withClient("client1").secret("{noop}secret1")
+		.authorizedGrantTypes("password","refresh_token","client_credentials")
+		.authorities("ROLE_CLIENT","ROLE_TRUSTED_CLIENT")
+		.scopes("read","write","truest")
+		.accessTokenValiditySeconds(300)
+		.refreshTokenValiditySeconds(Constants.THIRTY_DAYS)
+		.and()
+		.withClient("client2").secret("{noop}secret2")
 		.authorizedGrantTypes("password","refresh_token","client_credentials")
 		.authorities("ROLE_CLIENT","ROLE_TRUSTED_CLIENT")
 		.scopes("read","write","truest")
